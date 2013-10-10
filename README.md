@@ -9,6 +9,16 @@ Added following options to "allnoconfig":
 
 -----------------
 
+### How-To ###
+
+Download 3.10 Linux Kernel and the 3.10.15 patch extract it.
+patch -p1 patchfile in Linux Kernel directory.
+Rename folder.
+ARCH=x86 make allnoconfig.
+ARCH=x86 make menuconfig.
+Edit Makefile fpr ccache.
+ARCH=x86 make -j 4.
+
 ### Questions ###
 
 #### RAM-disks ####
