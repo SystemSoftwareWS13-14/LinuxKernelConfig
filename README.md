@@ -11,10 +11,23 @@ Added following options to "allnoconfig":
 
 ### Questions ###
 
+#### RAM-disks ####
+
 * Ram-disk: Virtual temporary disk in RAM.
 
-#### Linux specific ####
+##### Linux specific #####
 
 * Ramdisk: Older "ram disk" mechanism. Unnecessarily copying memory to cache, needs fs-driver, ...
 * Ramfs: Simple filesystem that exports Linux's disk caching mechanisms.
 * Tmpfs: Based on ramfs. Ability to write the data to swap space, add size limits, ...
+* Rootfs: Is a special instance of ramfs. Is always present.
+
+> All 2.6 Linux kernels contain a gzipped "cpio" format archive, which is
+extracted into rootfs when the kernel boots up.  After extracting, the kernel
+checks to see if rootfs contains a file "init", and if so it executes it as PID
+1.  If found, this init process is responsible for bringing the system the
+rest of the way up, including locating and mounting the real root device (if
+any).
+
+Source:
+https://www.kernel.org/doc/Documentation/filesystems/ramfs-rootfs-initramfs.txt
