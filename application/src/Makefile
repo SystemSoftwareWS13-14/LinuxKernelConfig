@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS=-c -Wall
+CFLAGS=-static -c -Wall
 
 HWEXEC=helloworld
 BINDIR=../bin
@@ -14,4 +14,4 @@ helloworld.o: $(HWSOURCE)
 	$(CC) $(CFLAGS) $(HWSOURCE)
 
 clean:
-	rm -rf *.o
+	rm -rf *.o $(OUTFILE)
