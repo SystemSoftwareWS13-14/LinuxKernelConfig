@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <errno.h>
 #include <string.h>
+#include <unistd.h>
 
 void printHelloWorld();
 int printSysInfo();
@@ -14,6 +15,8 @@ int main( int argc, const char* argv[])
 	{
 		return -1;
 	}
+
+	sleep(999999999);
 
 	return 0;
 }
