@@ -1,17 +1,22 @@
-CC=gcc
-CFLAGS=-static -c -Wall
+CFLAGS=-static -Wall -m32
 
+OUTFILE=$(BINDIR)/$(HWEXEC)
 HWEXEC=helloworld
 BINDIR=../bin
-OUTFILE=$(BINDIR)/$(HWEXEC)
+
 HWSOURCE=$(HWEXEC).c
-HWOBJECT=$(HWSOURCE:.c=.o)
+RM=rm -rf
+MKDIR=mkdir -p
 
-helloworld: $(HWOBJECT)
-	$(CC) $(HWOBJECT) -o $(OUTFILE)
+.PHONY: all clean
 
-helloworld.o: $(HWSOURCE)
-	$(CC) $(CFLAGS) $(HWSOURCE)
+all: $(BINDIR) $(OUTFILE)
+
+$(OUTFILE): $(HWSOURCE)
+	$(CC) $(CFLAGS) $^ -o $(@)
+
+$(BINDIR):
+	$(MKDIR) $(BINDIR)
 
 clean:
-	rm -rf *.o $(OUTFILE)
+	$(RM) *.o $(OUTFILE)
