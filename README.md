@@ -20,6 +20,10 @@ Added following options to "allnoconfig":
 * ARCH=x86 make -j 4.
 * Run emulate script for qemu.
 
+To run a shell with busybox:
+* Copy busybox multi-binary to kernel src folder
+* Run emulate script with rdinit option to /bin/sh
+
 ### Questions ###
 
 #### RAM-disks ####
