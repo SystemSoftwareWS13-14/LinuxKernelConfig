@@ -7,10 +7,16 @@ dir /sbin 755 0 0
 dir /usr/bin 755 0 0
 dir /proc 755 0 0
 dir /sys 755 0 0
-nod /dev/console 644 0 0 c 5 1
-file /init application/scripts/init 500 0 0
+dir /etc/init.d 755 0 0
+nod /dev/console 777 0 0 c 5 1
 file /bin/busybox busybox 755 0 0
 file /bin/helloworld application/bin/helloworld 755 0 0
+file /etc/init.d/rcS application/scripts/init 755 0 0
 slink /bin/sh busybox 777 0 0
 slink /bin/ls busybox 777 0 0
 slink /bin/mount busybox 777 0 0
+slink /bin/vi busybox 777 0 0
+slink /bin/cat busybox 777 0 0
+slink /bin/grep busybox 777 0 0
+slink /init busybox 777 0 0
+slink /bin/sleep busybox 777 0 0
