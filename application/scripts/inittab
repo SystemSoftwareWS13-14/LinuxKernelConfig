@@ -1,2 +1,2 @@
 ::sysinit:/etc/init.d/rcS
-::askfirst:/bin/sh
+tty1::askfirst:/bin/sh
