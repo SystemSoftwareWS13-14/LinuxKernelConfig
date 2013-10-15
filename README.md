@@ -26,6 +26,19 @@ It uses the configuration from /etc/inittab. To populate the /dev directory "mde
 
 ### Questions ###
 
+dmesg:
+prints kernel log to console.
+
+process count (ps):
+20
+
+/tmp after reboot:
+files are gone. FS reinitialized.
+
+provided Emulator space:
+130MB
+
+
 #### RAM-disks ####
 
 * Ram-disk: Virtual temporary disk in RAM.
