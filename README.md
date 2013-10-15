@@ -38,6 +38,9 @@ files are gone. FS reinitialized.
 provided Emulator space:
 130MB
 
+needed space to boot:
+23MB
+
 
 #### RAM-disks ####
 
