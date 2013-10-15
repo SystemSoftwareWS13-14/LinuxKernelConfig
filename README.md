@@ -6,6 +6,7 @@ Kernel configuration for a linux-3.10.15 kernel
 Added following options to "allnoconfig":
 * Initial RAM filesystem and RAM disk support
 * ELF binaries support
+* TMPFS support
 
 -----------------
 
@@ -17,12 +18,11 @@ Added following options to "allnoconfig":
 * ARCH=x86 make allnoconfig.
 * ARCH=x86 make menuconfig.
 * Edit Makefile for ccache.
-* ARCH=x86 make -j 4.
+* run compile script to compile kernel.
 * Run emulate script for qemu.
 
-To run a shell with busybox:
-* Copy busybox multi-binary to kernel src folder
-* Run emulate script with rdinit option to /bin/sh
+Kernel uses busybox init program to start /etc/init.d/rcS to mount several directories.
+It uses the configuration from /etc/inittab. To populate the /dev directory "mdev -s" is used.
 
 ### Questions ###
 
