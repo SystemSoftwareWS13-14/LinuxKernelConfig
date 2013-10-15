@@ -28,5 +28,5 @@ slink /bin/grep busybox 777 0 0
 slink /bin/cp busybox 777 0 0
 slink /bin/mv busybox 777 0 0
 slink /bin/rm busybox 777 0 0
-slink /init busybox 777 0 0
+slink /init /bin/busybox 777 0 0
 slink /bin/sleep busybox 777 0 0
