@@ -36,6 +36,10 @@ Remove all generated files + config + various backup files
 distclean
 mrproper + remove editor backup and patch files
 
+For console output /dev/console is required.
+
+If there is no init process (PID 1) -> kernel panic
+
 dmesg:
 prints kernel log to console.
 
@@ -50,7 +54,6 @@ provided Emulator space:
 
 needed space to boot:
 23MB
-
 
 #### RAM-disks ####
 
