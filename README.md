@@ -27,6 +27,11 @@ It uses the configuration from /etc/inittab. To populate the /dev directory "mde
 
 ### Questions ###
 
+BUILD   arch/x86/boot/bzImage
+Setup is 15068 bytes (padded to 15360 bytes).
+System is 1687 kB
+CRC 44b51156
+
 clean
 Remove most generated files but keep the config and enough build support to build external modules
 
