@@ -13,7 +13,7 @@ Added following options to "allnoconfig":
 ### How-To ###
 
 * Download 3.10 Linux Kernel, the 3.10.15 patch and extract it.
-* patch -p1 <patchfile> in Linux Kernel directory.
+* patch -p1 "patchfile" in Linux Kernel directory.
 * Rename kernel folder to version 3.10.15.
 * ARCH=x86 make allnoconfig.
 * ARCH=x86 make menuconfig.
@@ -72,3 +72,7 @@ any).
 
 Source:
 https://www.kernel.org/doc/Documentation/filesystems/ramfs-rootfs-initramfs.txt
+
+There are several ways to include a initfs. The most flexible way (no root required)
+is to use a configuration file. Other ways are external cpio archives/directories/files.
+(The kernel creates the archive automatically). For non-GPL programs external cpio is required.
