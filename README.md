@@ -26,6 +26,15 @@ It uses the configuration from /etc/inittab. To populate the /dev directory "mde
 
 ### Questions ###
 
+clean
+Remove most generated files but keep the config and enough build support to build external modules
+
+mrproper
+Remove all generated files + config + various backup files
+
+distclean
+mrproper + remove editor backup and patch files
+
 dmesg:
 prints kernel log to console.
 
