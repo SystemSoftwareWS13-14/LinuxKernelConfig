@@ -12,11 +12,12 @@ Added following options to "allnoconfig":
 
 ### How-To ###
 
-* Download 3.10 Linux Kernel and the 3.10.15 patch extract it.
-* patch -p1 patchfile in Linux Kernel directory.
-* Rename folder.
+* Download 3.10 Linux Kernel, the 3.10.15 patch and extract it.
+* patch -p1 <patchfile> in Linux Kernel directory.
+* Rename kernel folder to version 3.10.15.
 * ARCH=x86 make allnoconfig.
 * ARCH=x86 make menuconfig.
+* Enable the options specified on top of this article.
 * Edit Makefile for ccache.
 * run compile script to compile kernel.
 * Run emulate script for qemu.
