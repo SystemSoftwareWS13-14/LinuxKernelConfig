@@ -33,12 +33,15 @@ System is 1687 kB
 CRC 44b51156
 
 clean
+
 Remove most generated files but keep the config and enough build support to build external modules
 
 mrproper
+
 Remove all generated files + config + various backup files
 
 distclean
+
 mrproper + remove editor backup and patch files
 
 For console output /dev/console is required.
