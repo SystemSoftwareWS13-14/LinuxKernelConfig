@@ -39,3 +39,4 @@ slink /bin/time busybox 777 0 0
 slink /bin/zcat busybox 777 0 0
 slink /bin/who busybox 777 0 0
 slink /bin/chmod busybox 777 0 0
+slink /bin/dmesg busybox 777 0 0
