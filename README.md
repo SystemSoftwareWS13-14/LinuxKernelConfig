@@ -1,6 +1,8 @@
 LinuxKernelConfig
 =================
 
+### Kernel configuration ###
+
 Kernel configuration for a linux-3.10.15 kernel
 
 Added following options to "allnoconfig":
@@ -8,9 +10,9 @@ Added following options to "allnoconfig":
 * ELF binaries support
 * TMPFS support
 
------------------
-
 ### How-To ###
+
+How to compile and run (with qemu) the linux kernel.
 
 * Download 3.10 Linux Kernel, the 3.10.15 patch and extract it.
 * patch -p1 "patchfile" in Linux Kernel directory.
@@ -27,7 +29,7 @@ It uses the configuration from /etc/inittab. To populate the /dev directory "mde
 
 ### Questions ###
 
-BUILD: arch/x86/boot/bzImage  
+**BUILD** arch/x86/boot/bzImage  
 Setup is 15068 bytes (padded to 15360 bytes).  
 System is 1687 kB  
 CRC 44b51156  
@@ -60,11 +62,7 @@ files are gone. FS reinitialized.
 **needed space to boot**  
 23MB
 
-#### RAM-disks ####
-
-* Ram-disk: Virtual temporary disk in RAM.
-
-##### Linux specific #####
+### Information about RAM-disks and RAM-FS ###
 
 * Ramdisk: Older "ram disk" mechanism. Unnecessarily copying memory to cache, needs fs-driver, ...
 * Ramfs: Simple filesystem that exports Linux's disk caching mechanisms.
