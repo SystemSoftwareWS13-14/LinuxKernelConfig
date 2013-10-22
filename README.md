@@ -19,7 +19,7 @@ Added following options to "allnoconfig":
 * ARCH=x86 make menuconfig.
 * Enable the options specified on top of this article.
 * Edit Makefile for ccache.
-* run compile script to compile kernel.
+* Run compile script to compile kernel.
 * Run emulate script for qemu.
 
 Kernel uses busybox init program to start /etc/init.d/rcS to mount several directories.
@@ -27,40 +27,37 @@ It uses the configuration from /etc/inittab. To populate the /dev directory "mde
 
 ### Questions ###
 
-BUILD   arch/x86/boot/bzImage
-Setup is 15068 bytes (padded to 15360 bytes).
-System is 1687 kB
-CRC 44b51156
+BUILD: arch/x86/boot/bzImage  
+Setup is 15068 bytes (padded to 15360 bytes).  
+System is 1687 kB  
+CRC 44b51156  
 
-clean
-
+**clean**  
 Remove most generated files but keep the config and enough build support to build external modules
 
-mrproper
-
+**mrproper**  
 Remove all generated files + config + various backup files
 
-distclean
-
+**distclean**  
 mrproper + remove editor backup and patch files
 
 For console output /dev/console is required.
 
 If there is no init process (PID 1) -> kernel panic
 
-dmesg:
+**dmesg**  
 prints kernel log to console.
 
-process count (ps):
+**process count (ps)**  
 20
 
-/tmp after reboot:
+**/tmp after reboot**  
 files are gone. FS reinitialized.
 
-provided Emulator space:
+**provided Emulator space**  
 130MB
 
-needed space to boot:
+**needed space to boot**  
 23MB
 
 #### RAM-disks ####
